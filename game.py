@@ -27,11 +27,27 @@ while user_guess != 'quit':
         user_guess = int(user_guess)
     except:
         if user_guess == 'quit':
+            print('-----------------------')
             break
         else:
-            print('Please type a number or quit\n')
+            if user_guess == 'Claire':
+                 print('I LOVE YOU CLAIRE, YOU ARE THE LOVE OF MY LIFE,')
+                 print('LOVE CHARLIE <3333\n\n')
+                 print('-----------------------')
+                 continue
+            print('Please type a number or quit\n\n')
+            print('-----------------------')
             continue
     
+    if user_guess > highest_num:
+         print('Guess is higher than maximum number\n')
+         print('-----------------------')
+         continue
+    if user_guess < lowest_num:
+         print('Guess is lower than lowest number\n')
+         print('-----------------------')
+         continue
+
     print('User guess: ', user_guess, '\n')
     
     if user_guess == random_number:
@@ -43,9 +59,8 @@ while user_guess != 'quit':
     print('-----------------------')
 
 if user_guess == 'quit':
-    print('Sorry try again later :(')
+    print('Sorry try again later :(\n')
 else:
     print('CONGRATS you guessed the mystery number!\n')
 
 print('----------FINISHED RUN----------')
-# TODO: Cannot win game on first guess for some reason?
